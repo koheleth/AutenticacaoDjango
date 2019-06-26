@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'app',
 ]
 
+LOGIN_URL = 'logar'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

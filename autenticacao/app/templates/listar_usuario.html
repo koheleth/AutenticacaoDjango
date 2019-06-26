@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table">
+    <thread>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Ação</th>
+    </thread>
+    <tbody>
+    {% for usuario in lista %}
+    <tr>
+        <td>{{ usuario.username }}</td>
+        <td>{{ usuario.email }}</td>
+        <td>
+            <a href="#">
+                <i class="material-icons">mode_edit</i>
+            </a>
+            <a href="#">
+                <i class="material-icons">delete</i>
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'registar_usuario' %}">
+    <button type="submit" class="btn btn-primary">
+        Cadastrar
+    </button>
+</a>
+{% endblock content %}
